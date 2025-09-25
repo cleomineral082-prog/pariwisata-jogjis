@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pariwisata Jogja</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+      background: #f9f9f9;
+    }
+    header {
+      background: url("https://upload.wikimedia.org/wikipedia/commons/b/b9/Malioboro_Yogyakarta_Indonesia.jpg") no-repeat center center/cover;
+      height: 70vh;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+    header h1 {
+      background: rgba(0,0,0,0.5);
+      padding: 20px;
+      border-radius: 10px;
+    }
+    nav {
+      background: #333;
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      padding: 10px;
+    }
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+    }
+    section {
+      padding: 40px 20px;
+      max-width: 1100px;
+      margin: auto;
+    }
+    .destinasi {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+    .card {
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      overflow: hidden;
+    }
+    .card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+    .card h3 {
+      margin: 15px;
+    }
+    .card p {
+      margin: 0 15px 15px;
+    }
+    .price {
+      font-weight: bold;
+      color: #d35400;
+      margin: 0 15px 20px;
+    }
+    /* Galeri fix ukuran */
+    .galeri {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+    }
+    .galeri img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    iframe {
+      width: 100%;
+      height: 450px;
+      border: 0;
+      border-radius: 10px;
+    }
+    form {
+      background: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      max-width: 600px;
+      margin: auto;
+    }
+    form label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+    form input, form select, form button {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+    form button {
+      background: #333;
+      color: white;
+      border: none;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    form button:hover {
+      background: #555;
+    }
+    footer {
+      background: #333;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="#destinasi">Destinasi</a>
+    <a href="#galeri">Galeri</a>
+    <a href="#kontak">Kontak</a>
+    <a href="#peta">Peta</a>
+    <a href="#booking">Booking</a>
+  </nav>
+
+  <header>
+    <h1>Selamat Datang di Jogja Istimewa</h1>
+  </header>
+
+  <section id="destinasi">
+    <h2>Destinasi Populer Jogja</h2>
+    <div class="destinasi">
+      <div class="card">
+        <img src="Borobudur java.jpeg" alt="Borobudur">
+        <h3>Candi Borobudur</h3>
+        <p>Salah satu warisan dunia UNESCO, candi Buddha terbesar di dunia. Dibangun abad ke-8 dengan relief indah yang penuh makna sejarah dan religi.</p>
+        <p class="price">Tiket Masuk: Rp50.000 (Domestik) | Rp375.000 (Wisatawan Asing)</p>
+      </div>
+      <div class="card">
+        <img src="malboro.jpeg" alt="Malioboro">
+        <h3>Jalan Malioboro</h3>
+        <p>Pusat perbelanjaan, kuliner, dan budaya khas Jogja. Suasana malam hari semakin meriah dengan musik jalanan dan wisata belanja oleh-oleh.</p>
+        <p class="price">Gratis (biaya parkir Rp5.000 - Rp10.000)</p>
+      </div>
+      <div class="card">
+        <img src="Ts.jpeg" alt="Taman Sari">
+        <h3>Taman Sari</h3>
+        <p>Kompleks istana air peninggalan Kesultanan Yogyakarta. Terdiri dari kolam pemandian, lorong bawah tanah, hingga tempat peristirahatan raja.</p>
+        <p class="price">Tiket Masuk: Rp15.000</p>
+      </div>
+      <div class="card">
+        <img src="pr.jpeg" alt="Pantai Parangtritis">
+        <h3>Pantai Parangtritis</h3>
+        <p>Pantai ikonik Jogja dengan ombak besar dan suasana mistis. Cocok untuk melihat sunset, bermain ATV, dan menikmati kuliner laut.</p>
+        <p class="price">Tiket Masuk: Rp10.000</p>
+      </div>
+      <div class="card">
+        <img src="mrp.jpeg" alt="Gunung Merapi">
+        <h3>Gunung Merapi</h3>
+        <p>Gunung berapi aktif yang menjadi ikon Jogja. Wisata jeep lava tour populer untuk melihat sisa erupsi dan panorama pegunungan.</p>
+        <p class="price">Paket Jeep Lava Tour: mulai Rp400.000/jeep (isi 4 orang)</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="galeri">
+    <h2>Galeri Jogja</h2>
+    <div class="galeri">
+      <img src="prm.jpeg" alt="Prambanan">
+      <img src="krt.jpeg" alt="Keraton Jogja">
+      <img src="al.jpeg" alt="Alun-alun Kidul">
+    </div>
+  </section>
+
+  <section id="kontak">
+    <h2>Kontak</h2>
+    <p>Untuk informasi lebih lanjut hubungi:</p>
+    <p>Email: info@pariwisatajogja.com</p>
+    <p>Telepon: +62 812-3456-7890</p>
+  </section>
+
+  <section id="peta">
+    <h2>Peta Lokasi Jogja</h2>
+    <iframe 
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63331.03737798937!2d110.333333!3d-7.797068!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a5797d2f05c1d%3A0x3027a76e352bd90!2sYogyakarta!5e0!3m2!1sid!2sid!4v1695671000000!5m2!1sid!2sid" 
+      allowfullscreen="" 
+      loading="lazy" 
+      referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+  </section>
+
+  <section id="booking">
+    <h2>Formulir Booking Wisata</h2>
+    <form onsubmit="alert('Terima kasih, data booking Anda sudah terkirim!'); return false;">
+      <label for="nama">Nama Lengkap</label>
+      <input type="text" id="nama" name="nama" required>
+
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="destinasi">Pilih Destinasi</label>
+      <select id="destinasi" name="destinasi" required>
+        <option value="">-- Pilih --</option>
+        <option value="Borobudur">Candi Borobudur</option>
+        <option value="Malioboro">Jalan Malioboro</option>
+        <option value="Taman Sari">Taman Sari</option>
+        <option value="Parangtritis">Pantai Parangtritis</option>
+        <option value="Merapi">Gunung Merapi</option>
+      </select>
+
+      <label for="tanggal">Tanggal Kunjungan</label>
+      <input type="date" id="tanggal" name="tanggal" required>
+
+      <button type="submit">Kirim Booking</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Pariwisata Jogja. Semua Hak Dilindungi.</p>
+  </footer>
+</body>
+</html>
